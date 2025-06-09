@@ -1,5 +1,7 @@
+package model;
+
 public class Task {
-    protected int id;
+    public int id;
     protected String title;
     protected String description;
     protected Status status;
@@ -39,6 +41,6 @@ public class Task {
 
     @Override
     public String toString() {
-        return "Task{id=" + id + ", title='" + title + "', status=" + status + '}';
+        return "model.Task{id=" + id + ", title='" + title + "', status=" + status + '}';
     }
 }
