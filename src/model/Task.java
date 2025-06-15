@@ -2,8 +2,8 @@ package model;
 
 public class Task {
     public int id;
-    protected String title;
-    protected String description;
+    protected final String title;
+    protected final String description;
     protected Status status;
 
     public Task(int id, String title, String description, Status status) {
@@ -29,8 +29,7 @@ public class Task {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Task)) return false;
-        Task task = (Task) o;
+        if (!(o instanceof Task task)) return false;
         return id == task.id;
     }
 
