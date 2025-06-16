@@ -15,6 +15,9 @@ public class Epic extends Task {
     }
 
     public void addSubtask(int subtaskId) {
+        if (subtaskId == this.id) {
+            throw new IllegalArgumentException("Эпик не может ссылаться на себя как на подзадачу.");
+        }
         subtaskIds.add(subtaskId);
     }
 
